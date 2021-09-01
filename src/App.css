@@ -1,6 +1,16 @@
+.btnLogo {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+.btnLogo:focus{
+    outline: none !important;
+    border: none;
+}
 .navbar-brand {
   height: 80px;
   width: auto;
+  filter: drop-shadow(2px 4px 8px #585858);
 }
 .fa {
   font-size: 50px;
@@ -17,9 +27,13 @@
 .card {
   width: 20rem;
   margin: 20px;
+  border-radius: 20px;
 }
 .card-img-top {
   height: 12rem;
+}
+.card-header {
+    background-color: transparent;
 }
 .card-title {
   text-align: center;
@@ -27,6 +41,7 @@
 .card-footer {
   display: flex;
   justify-content: space-around;
+  background-color: transparent;
 }
 span {
   font-size: 20px;

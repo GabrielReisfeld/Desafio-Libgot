@@ -23,7 +23,7 @@ function PokemonCards({ p }) {
   }, [p]);
 
   return (
-    <div className="col-4">
+    <div className="col-xs-12 col-md-6 col-lg-4">
       {loadingPokemons ? (
         <div>CARGANDO</div>
       ) : (

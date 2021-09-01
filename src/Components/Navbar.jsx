@@ -6,40 +6,43 @@ function Navbar({ filterPokemon, setPokemon, setSearch }) {
 
   const handleChange = (e) => {
     setSearchPokemon(e.target.value);
-    if (e.target.value.length === 0) {
-      filterPokemon(null);
-    }
+    // if (e.target.value.length === 0) {
+    //   filterPokemon(null);
+    // }
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
     const res = await filterPokemon(searchPokemon);
-    setPokemon(res.data);
-    setSearch(true);
-    setSearchPokemon("");
+    if (res !== undefined) {
+      setPokemon(res.data);
+      setSearch(true);
+      setSearchPokemon("");
+    } else {
+      alert("No existe un pokemon con ese nombre o id");
+    }
+  };
+  const refreshPage = () => {
+    window.location.reload();
   };
 
   return (
     <div>
       <nav className="navbar navbar-light bg-light">
         <div className="container-fluid">
-          <a href="../../public/index.html">
+          <button onClick={refreshPage} className="btnLogo">
             <img className="navbar-brand" src={logo} alt="logo" />
-          </a>
-          <form className="d-flex">
+          </button>
+          <form className="d-flex" onSubmit={handleSubmit}>
             <input
               className="form-control me-2"
               type="search"
-              placeholder="Search a Pokemon"
+              placeholder="Search a Pokemon by Name or Id"
               value={searchPokemon}
               onChange={handleChange}
+              size="32"
+              required
             />
-            <button
-              className="btn btn-outline-success"
-              type="submit"
-              onClick={handleSubmit}
-            >
-              Search
-            </button>
+            <button className="btn btn-success">Search</button>
           </form>
           <a
             href="https://github.com/GabrielReisfeld/Desafio-Libgot"
