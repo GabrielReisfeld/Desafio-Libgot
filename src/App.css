@@ -1,11 +1,11 @@
 .btnLogo {
-    outline: none;
-    border: none;
-    background-color: transparent;
+  outline: none;
+  border: none;
+  background-color: transparent;
 }
-.btnLogo:focus{
-    outline: none !important;
-    border: none;
+.btnLogo:focus {
+  outline: none !important;
+  border: none;
 }
 .navbar-brand {
   height: 80px;
@@ -28,12 +28,28 @@
   width: 20rem;
   margin: 20px;
   border-radius: 20px;
+  position: relative;
+}
+.info {
+  padding: 1em;
+  top: 100%;
+  display: none;
+}
+.card:hover .info {
+  display: block;
+  position: absolute;
+  top: 0;
+  background: #4a9dd4;
+  color: white;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
 }
 .card-img-top {
   height: 12rem;
 }
 .card-header {
-    background-color: transparent;
+  background-color: transparent;
 }
 .card-title {
   text-align: center;
@@ -46,6 +62,8 @@
 span {
   font-size: 20px;
   margin: 0 20px;
+  border-radius: 5px;
+  padding: 3px;
 }
 
 .buttons {

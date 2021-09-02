@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import logo from "../Media/logo.png";
+import Swal from "sweetalert2";
 
 function Navbar({ filterPokemon, setPokemon, setSearch }) {
   const [searchPokemon, setSearchPokemon] = useState("");
 
   const handleChange = (e) => {
     setSearchPokemon(e.target.value);
-    // if (e.target.value.length === 0) {
-    //   filterPokemon(null);
-    // }
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,7 +16,13 @@ function Navbar({ filterPokemon, setPokemon, setSearch }) {
       setSearch(true);
       setSearchPokemon("");
     } else {
-      alert("No existe un pokemon con ese nombre o id");
+      Swal.fire({
+        title: "Error!",
+        text: "No existe un pokemon con ese nombre o id",
+        icon: "warning",
+        iconColor: "red",
+        confirmButtonText: "Cerrar",
+      });
     }
   };
   const refreshPage = () => {
