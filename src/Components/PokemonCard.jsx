@@ -11,7 +11,7 @@ function PokemonCard({ pokemon }) {
           <img
             className="card-img-top"
             src={
-              pokemon.sprites && pokemon.sprites.other.dream_world.front_default
+              pokemon.sprites && pokemon.sprites.other["official-artwork"].front_default
             }
             alt={pokemon.name}
           />

@@ -36,7 +36,6 @@
   display: none;
 }
 .card:hover .info {
-  display: block;
   position: absolute;
   top: 0;
   background: #4a9dd4;
@@ -44,9 +43,13 @@
   height: 100%;
   width: 100%;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .card-img-top {
-  height: 12rem;
+  height: 16rem;
 }
 .card-header {
   background-color: transparent;

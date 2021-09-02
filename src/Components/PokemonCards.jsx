@@ -31,7 +31,7 @@ function PokemonCards({ p }) {
         <div className="card">
           <img
             className="card-img-top"
-            src={poke.sprites && poke.sprites.other.dream_world.front_default}
+            src={poke.sprites && poke.sprites.other["official-artwork"].front_default}
             alt={poke.name}
           />
           <div className="card-header">
