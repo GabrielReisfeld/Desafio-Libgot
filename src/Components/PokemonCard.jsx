@@ -3,7 +3,7 @@ import colorTypes from "../colorTypes";
 
 function PokemonCard({ pokemon }) {
   return (
-    <div className="col-4">
+    <div className="col-xs-12 col-md-6 col-lg-4">
       {!pokemon ? (
         <div>No existe un pokemon con ese nombre</div>
       ) : (

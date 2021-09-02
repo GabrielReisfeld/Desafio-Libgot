@@ -10,7 +10,7 @@ function Navbar({ filterPokemon, setPokemon, setSearch }) {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await filterPokemon(searchPokemon);
+    const res = await filterPokemon(searchPokemon.toLowerCase());
     if (res !== undefined) {
       setPokemon(res.data);
       setSearch(true);
